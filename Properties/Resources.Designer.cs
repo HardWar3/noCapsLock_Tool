@@ -63,6 +63,16 @@ namespace noCapsLock_Tool.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
         /// </summary>
+        public static System.Drawing.Icon GeileSocke {
+            get {
+                object obj = ResourceManager.GetObject("GeileSocke", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Icon ähnlich wie (Symbol).
+        /// </summary>
         public static System.Drawing.Icon Icon1 {
             get {
                 object obj = ResourceManager.GetObject("Icon1", resourceCulture);
