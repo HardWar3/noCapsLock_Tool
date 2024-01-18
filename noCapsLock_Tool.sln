@@ -5,7 +5,7 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "noCapsLock_Tool", "noCapsLock_Tool.csproj", "{1F445048-037F-4BC4-AD06-D6DBEF91793E}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "noCapsLock_Tool_Installer", "..\noCapsLock_Tool_Installer\noCapsLock_Tool_Installer.vdproj", "{205AFE6D-FF74-4A0F-94F4-45880E696CB9}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "noCapsLock_Tool_", "..\noCapsLock_Tool_Installer\noCapsLock_Tool_Installer.vdproj", "{205AFE6D-FF74-4A0F-94F4-45880E696CB9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

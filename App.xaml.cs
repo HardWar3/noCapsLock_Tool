@@ -18,7 +18,7 @@ namespace noCapsLock_Tool
         static extern void keybd_event(byte bVK,byte bScan,uint dwFlags,UIntPtr dwExtraInfo);
         const int KEYEVENTF_EXTEMDEDKEY = 0x1;
         const int KEYEVENTF_KEYUP = 0x2;
-
+        const int KEY_CAPSLOCK = 0x14;
         protected override void OnStartup(StartupEventArgs e)
         {
             Add_System_Tray();
@@ -50,7 +50,7 @@ namespace noCapsLock_Tool
         {
             System.Timers.Timer timer = new System.Timers.Timer();
 
-            timer.Interval = 500;
+            timer.Interval = 50;
 
             timer.Elapsed += Turn_off_capslock;
 
@@ -61,9 +61,14 @@ namespace noCapsLock_Tool
         {
             if (Control.IsKeyLocked(Keys.CapsLock))
             {
-                keybd_event(0x14, 0x45, KEYEVENTF_EXTEMDEDKEY, (UIntPtr)0);
-                keybd_event(0x14, 0x45, KEYEVENTF_EXTEMDEDKEY | KEYEVENTF_KEYUP, (UIntPtr)0);
+                Switch_key(KEY_CAPSLOCK);
             }
+        }
+
+        private void Switch_key(byte key)
+        {
+            keybd_event(key, 0x45, KEYEVENTF_EXTEMDEDKEY, (UIntPtr)0);
+            keybd_event(key, 0x45, KEYEVENTF_EXTEMDEDKEY | KEYEVENTF_KEYUP, (UIntPtr)0);
         }
     }
 }
